@@ -1,0 +1,19 @@
+import java.util.*;
+public class Anujbhai {
+	public static void main(String[]args)
+	{
+		int arr[]=new int[] {2,7,6,1,4,3};
+		int Rmax=arr[arr.length-1];	// Since we always have to print the rightmost element
+		System.out.println(Rmax);
+		for(int i = arr.length-2 ; i>=0 ; i--) {
+			if (arr[i]>Rmax) {
+				Rmax=arr[i];
+				System.out.println(Rmax);
+			}
+			
+		}
+		
+}
+}
+
+

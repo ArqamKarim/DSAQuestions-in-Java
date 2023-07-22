@@ -1,0 +1,21 @@
+// Complete the complete solution to the problem and run all given (vissible and hidden) test cases
+
+import java.util.*;
+import java.lang.*;
+public class Clockangle{
+	public static void main(String [] args){
+		
+		Scanner sc=new Scanner(System.in);
+		int H = sc.nextInt();
+		int M = sc.nextInt();
+		int Hangle= (H%12)*30+M/2;
+		int Mangle= M*6;
+		double angle=0;
+		double abs=Math.abs(Hangle-Mangle);
+		angle= Math.min(abs, 360-abs);
+		int value= (int)angle;
+		
+		System.out.println(value);
+	}
+}
+

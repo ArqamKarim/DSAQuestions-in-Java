@@ -1,0 +1,12 @@
+public class Anujbhai {
+	static double Pow(int a,int b) {
+		if(a==0) return 0;
+		if(b==0) return 1;
+		return Math.pow(a,b);
+	}
+	public static void main(String[]args)
+	{
+		System.out.println(Pow(3,0));
+
+}
+}

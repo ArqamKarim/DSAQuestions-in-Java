@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Divisor");
+        int num1= sc.nextInt();
+        System.out.println("Enter Dividend");
+        int num2 = sc.nextInt();
+        int res=num2/num1;
+        System.out.println("Quotient is: "+res);
+
+    }
+}

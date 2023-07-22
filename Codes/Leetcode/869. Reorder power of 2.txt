@@ -1,0 +1,29 @@
+// We store the frequency of the int n in an array and cross check it with the frequency of the powers of two
+
+class Solution {
+    public boolean reorderedPowerOf2(int n) {
+        int[] countn=count(n);
+        int num=1;
+        for(int i = 0; i<31 ; i++){
+            if(Arrays.equals(countn,count(num))){
+                return true;
+                
+            }
+            num=num<<1; // powers of 2
+        }
+        return false;
+        
+        
+    }
+    
+    int[] count(int n){
+    int[] arr = new int[10];
+    while(n>0){
+        arr[n%10]++;
+        n/=10;
+    }
+    return arr;
+}
+
+
+}

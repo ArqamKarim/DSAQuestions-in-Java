@@ -1,0 +1,15 @@
+import java.util.*;
+public class Anujbhai {
+	public static void main(String[]args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the radius of the circle: ");
+		int rad = sc.nextInt();		
+		double area = Math.PI * rad * rad;
+		double per= 2*Math.PI*rad;
+		System.out.println("Area is: "+ area);
+		System.out.println("Perimeter is: "+ per);
+		
+		}
+}
+	

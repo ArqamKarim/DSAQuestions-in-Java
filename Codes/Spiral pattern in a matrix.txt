@@ -1,0 +1,68 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the Matrix Dimensions: \n");
+		int rows=sc.nextInt();
+		int col=sc.nextInt();
+		int[][] matrix = new int[rows][col];
+
+		
+		// taking i/p from user for matrix
+        System.out.print("Enter the elements of matrix: \n");
+		for(int i=0;i<rows; i++ ){
+		    for(int j=0;j<col;j++){
+		        matrix[i][j]=sc.nextInt();
+		    }
+		}
+        sc.close();
+		
+        int Top=0 , Down=rows-1, Left=0, Right=col-1, dir=0; 
+        /*  Using Direction
+         0 ->
+
+         1 |
+           v   
+
+         2 <-
+
+         3 ^
+           |
+        */
+		    //Printing o/p in spiral mode
+            while(Top<=Down && Left<=Right){
+                if(dir==0){
+                    for(int i =Left; i<=Right;i++){
+                        System.out.print(matrix[Top][i]+" ");
+                        
+                    }
+                    Top++;
+                }
+                else if(dir==1){
+                    for(int i=Top;i<=Down;i++){
+                        System.out.print(matrix[i][Right]+" ");
+                    }
+                    Right--;
+                }
+                else if(dir==2){
+                    for(int i=Right;i>=Left;i--){
+                        System.out.print(matrix[Down][i]+" ");
+                        
+                    }
+                    Down--;
+                }
+                else if(dir==3){
+                    for(int i=Down;i>=Top;i--){
+                        System.out.print(matrix[i][Left]+" ");
+                        
+                    }
+                    Left++;
+                }
+                dir=(dir+1)%4; //Important To avoid dir=4 we take modulo as 4
+
+            }
+		    
+		
+	}
+}

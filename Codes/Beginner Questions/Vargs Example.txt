@@ -1,0 +1,29 @@
+public class Main {
+    //Method overloading to add numbers and concatenates string using Vargs
+    
+public int sum(int...args) {
+    int sum = 0;
+
+    for (int num : args) {
+        sum = sum + num;
+    }
+
+    return sum;
+}
+
+public String sum(String... concat){
+    String str2="";
+    for(String s:concat){
+        str2=str2+s;
+    }
+    return str2;
+}
+
+
+    public static void main(String[] args) {
+        Main obj = new Main();
+        System.out.println(obj.sum(10,15));
+        System.out.println(obj.sum("AB","C"));
+
+    }
+}

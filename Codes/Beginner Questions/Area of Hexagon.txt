@@ -1,0 +1,13 @@
+import java.util.*;
+public class Anujbhai {
+	public static void main(String[]args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the length of the hex");
+		int len = sc.nextInt();
+		double Area = (6 * len*len)/(4*Math.tan(Math.PI/6));
+		System.out.println("Area = : "+Area);
+						
+		}
+}
+	

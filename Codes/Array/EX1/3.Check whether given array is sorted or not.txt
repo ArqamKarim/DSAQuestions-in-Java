@@ -1,0 +1,26 @@
+import java.util.*;
+public class Anujbhai {
+	static boolean sortedornot(int arr[], int n)
+	{
+		if(n==0 || n==1) 
+			return true;
+		for(int i = 1; i<n ; i++) 
+			if(arr[i-1]>arr[i])
+				return false;
+		return true;
+		
+	}
+	public static void main(String[]args)
+	{
+		int arr[]= {20,10,40};
+		int n = arr.length;
+		if(sortedornot(arr,n))
+			System.out.println("sorted");
+		else
+			System.out.println("Not sorted");
+		}
+		
+}
+
+
+

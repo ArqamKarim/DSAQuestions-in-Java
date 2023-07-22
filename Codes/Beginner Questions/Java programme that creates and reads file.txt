@@ -1,0 +1,26 @@
+import java.io.*;
+
+public class Main {
+
+    public static void main(String[] args) throws IOException {
+        CreateFile();
+        WriteToFile();
+    }
+
+    public static void CreateFile() throws IOException {
+        File file = new File("C:\\Users\\user\\Desktop\\newfile.txt");
+        boolean f = file.createNewFile();
+        if (f) {
+            System.out.println("File Created");
+        } else {
+            System.out.println("Already Present");
+        }
+    }
+
+    public static void WriteToFile() throws IOException {
+        FileWriter myWriter = new FileWriter("C:\\Users\\user\\Desktop\\newfile.txt");
+        myWriter.write("Java is Fun");
+        myWriter.close();
+        System.out.println("Successfully wrote to the file.");
+    }
+}
